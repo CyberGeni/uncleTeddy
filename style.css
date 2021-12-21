@@ -1,0 +1,19 @@
+/* COLOR GUIDES */
+
+/* (body outline) deep brown: #753a00*/
+
+/* (body color) neutral brown: #b78048*/
+
+/* (feet/paws and bunny ears) light brown: #f3c392*/
+
+/* (facial outlines) black: #000*/
+
+/* lets get to it now, shall we?*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
