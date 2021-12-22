@@ -4,16 +4,173 @@
 
 /* (body color) neutral brown: #b78048*/
 
-/* (feet/paws and bunny ears) light brown: #f3c392*/
+/* (feet/paws, mouth, and bunny ears) light brown: #f3c392*/
 
 /* (facial outlines) black: #000*/
 
 /* lets get to it now, shall we?*/
 
+
+/* general positioning */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* everything facial*/
+.face {
+    position: relative;
+    width: 185px;
+    height: 160px;
+    margin: auto;
+    background-color: #b78048;
+    border-radius: 50%;
+    border: 12px solid #753a00;
+    box-shadow: inset 0px 0.5px 2px 2px #30180073;
+    z-index: 100;
+}
+.ears {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 250px;
+    margin-left: 1.5em;
+}
+.ear {
+    height: 70px;
+    width: 80px;
+    margin-top: -1.7em;
+    border: 12px solid #753a00;
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 1px 1.5px #301800ab;
+    background-color: #f3c392;
+}
+.ear:first-child {
+    transform: rotate(310deg);
+}
+.ear:last-child {
+    transform: rotate(-310deg);
+}
+.eyes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2.7em;
+}
+.eye {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgb(31, 29, 29);
+}
+.mouth-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto;
+    width: 96px;
+    height: 80px;
+    border-top-left-radius: 72px;
+    border-top-right-radius: 72px;
+    border-bottom-left-radius: 96px;
+    border-bottom-right-radius: 96px;
+    border: 6px solid #753a00;
+    background-color: #f3c392;
+}
+.nose-thingy  {
+    display: inline-block;
+    font-size: 6px;
+    margin-top: -3em;
+    border: solid 4em transparent;
+    border-top-width: 0;
+    border-bottom-width: 5em;
+    border-bottom-color: rgb(31, 29, 29);
+    transform: rotate(180deg);
+    clip-path: circle(46% at 50% 71%);
+    content: '';
+} 
+
+.line {
+    width: 5px;
+    height: 20px;
+    background-color: rgb(20, 20, 20);
+    margin-top: -3px;
+    margin-left: 0.7px;
+}
+.mouth {
+    position: absolute;
+    height: 50px;
+    width: 80px;
+    margin-top: -1.7em;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-bottom:5px solid rgb(31, 29, 29);
+}
+
+/* everything body */
+.belly {
+    width: 220px;
+    height: 220px;
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    border: 12px solid #753a00;
+    transform: rotate(-45deg);
+    margin: auto;
+    margin-top: -3em;
+    background: #b78048;
+}
+.paws {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+.paw {
+    height: 85px;
+    width: 110px;
+    margin-top: -5em;
+    border: 12px solid #753a00;
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 1px 1.5px #301800ab;
+    background-color: #f3c392;
+}
+.paw:first-child {
+    transform: rotate(-300deg);
+}
+.paw:last-child {
+    transform: rotate(300deg);
+}
+
+/* hands */
+
+.hands {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 380px;
+    margin-left: -2.45em;
+}
+.hand {
+    height: 65px;
+    width:145px;
+    margin-top: -1em;
+    border: 12px solid #753a00;
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 1px 1.5px #301800ab;
+    background-color: #b78048;
+}
+.hand:first-child {
+    transform: rotate(-48deg);
+}
+.hand:last-child {
+    transform: rotate(48deg);
+}
+
+/* footer */
+footer {
+    display: flex;
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    bottom: 20px;
 }
